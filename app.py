@@ -5,28 +5,27 @@ Fixed: Stable-Baselines3 2D Array Shape Mismatch
 """
 
 import os
+import sys
 import warnings
 import json
 import h5py
 
+# 1. MUTE WARNINGS FIRST
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 warnings.filterwarnings('ignore')
 
-import numpy as np
-import sys
+# 2. TENSORFLOW IMPORTS
+import tensorflow as tf
+from tensorflow import keras
 
-# NUMPY 2.0 -> 1.x COMPATIBILITY PATCH
-sys.modules['numpy._core'] = sys.modules['numpy.core']
-sys.modules['numpy._core.numeric'] = sys.modules['numpy.core.numeric']
-sys.modules['numpy._core.multiarray'] = sys.modules['numpy.core.multiarray']
+# 3. STANDARD IMPORTS (NO PATCHES NEEDED!)
+import numpy as np
+import pandas as pd
+import pickle
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import pandas as pd
-import pickle
-import tensorflow as tf
-from tensorflow import keras
 from stable_baselines3 import DQN
 
 app = Flask(__name__)
