@@ -146,7 +146,7 @@ python --version
 ### Step 2: Clone the Repository
 
 ```bash
-git clone https://github.com/shiban-alam/ai-powered-ev-battery-management-system.git
+git clone https://github.com/md-shiban-alam/ai-powered-ev-battery-management-system.git
 cd ai-powered-ev-battery-management-system
 ```
 
@@ -467,7 +467,7 @@ This project is submitted in partial fulfillment of the requirements for the deg
 
 For any queries regarding this project, please reach out to:
 
-- **Md. Shiban Alam** — [mdshibanalam@gmail.com]
+- **Md. Shiban Alam** — [ai23.mdshiban.alam@stcet.ac.in.com]
 
 ---
 
